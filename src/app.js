@@ -6,11 +6,8 @@ import indexRoutes from "./routes/index.routes.js";
 
 const app = express();
 
-// Middlewares
 app.use(morgan("dev"));
 app.use(express.json());
-
-// Routes
 app.use("/", indexRoutes);
 app.use("/api", employeesRoutes);
 
